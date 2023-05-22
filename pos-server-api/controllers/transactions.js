@@ -59,7 +59,7 @@ exports.addTransaction = async (order, products) => {
 };
 
 
-// 👇 internal function 👇
+// internal function 
 
 async function addDetailTransaction(transaction_detail, product_id) {
 	const query = await db.query("INSERT INTO transaction_detail(no_order,id_product,quantity) VALUES ?", [transaction_detail])
